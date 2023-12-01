@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Nota Fiscal</title>
+</head>
+
+<body>
+  <div class="row">
+    <section class="col form-nfe">
+      <div class="formulario d-flex justify-content-center align-items-center">
+        <div class="box p-4">
+          <form id="form" class="form">
+            <h2 class="text-center pb-4">Emitir Nota Fiscal de Serviço</h2>
+
+            <div class="form-group d-flex flex-column mt-4"><!-- Nome da empresa -->
+              <label for="nomeEmpresa">Nome da empresa: </label>
+              <input type="text" name="nomeEmpresa" id="nomeCliente" placeholder="Digite o nome da  empresa">
+            </div>
+
+            <div class="form-group d-flex flex-column mt-4"><!-- Razão social -->
+              <label for="razaoSocial">Razão social: </label>
+              <input type="text" name="razaoSocial" id="razaoSocial" placeholder="Digite a razao social">
+            </div>
+
+            <div class="form-group d-flex flex-column mt-4"><!-- CPNJ -->
+              <label for="cnpj">CNPJ: </label>
+              <input type="text" name="cnpj" id="cnpj" placeholder="Digite o cnpj da empresa">
+            </div>
+
+            <div class="form-group d-flex flex-column mt-4"><!-- CPNJ -->
+              <!--Devolução, Retorno, Complementar, Remessa, Entrega Futura e Venda Consignada-->
+              <label for="naturezaOperacao">Natureza da operação: </label>
+              <select name="naturezaOperacao" id="naturezaOperacao">
+                <option value="venda">Venda Consignada</option>
+                <option value="devolução">Devolução</option>
+                <option value="retorno">Retorno</option>
+                <option value="complementar">Complementar</option>
+                <option value="remessa">Remessa</option>
+                <option value="entregaFutura">Entrega Futura</option>
+              </select>
+            </div>
+
+            <div class="form-group d-flex flex-column mt-4"><!-- CPNJ -->
+              <label for="descricaoProduto">Descrição do produto: </label>
+              <textarea name="descricaoProduto" id="descricaoProduto"></textarea>
+            </div>
+
+            <div class="form-group mt-4 row"><!-- Data e hora -->
+              <div class="col d-flex flex-column">
+                <label for="data">Data: </label>
+                <input type="date" name="data" id="data">
+              </div>                       
+              <div class="col d-flex flex-column">
+                <label for="hora">Hora: </label>
+                <input type="time" name="hora" id="hora">
+              </div>                       
+            </div>
+
+            <div class="form-group mt-5 d-flex justify-content-center ">
+              <input type="submit" value="Calcular imposto" class="px-3 py-2">
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="col result-nfe">
+      <div class="nota-fiscal d-flex d-flex justify-content-center align-items-center">
+        <div class="box p-4">
+          <h2 class="text-center pb-4">Nota Fiscal de Serviço</h2>
+          <div>
+            <p><strong>Cliente:</strong> <span id="cliente"></span></p>
+            <p><strong>CNPJ:</strong> <span id="cnpj"></span></p>
+            <p><strong>Natureza da Operação:</strong> <span id="naturezaOperacao"></span></p>
+            <p><strong>Descrição do Produto:</strong> <span id="descricaoProduto"></span></p>
+            <p><strong>Data da Operação: </strong> <span id="dataOperacao"></span></p>
+            <p><strong>Hora da Operação: </strong> <span id="horaOperacao"></span></p>
+            <p><strong>Valor do Serviço (R$):</strong> <span id="valor"></span></p>
+            <p><strong>Imposto (10%):</strong> <span id="imposto"></span></p>
+            <p><strong>Total:</strong> <span id="total"></span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Natureza da Operação -->
+
+
+  <!-- Descrição do Produto -->
+
+
+  <!-- Data da Operação -->
+
+  <!-- BOOTSTRAP -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
