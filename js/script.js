@@ -1,6 +1,5 @@
 function calcularImpostos() {
     //Dados do formulário
-
     var nomeEmpresa = document.getElementById('nomeEmpresa').value
     var razaoSocial = document.getElementById('razaoSocial').value
     var cnpj = document.getElementById('cnpj').value
