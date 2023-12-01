@@ -20,23 +20,22 @@
 
             <div class="form-group d-flex flex-column mt-4"><!-- Nome da empresa -->
               <label for="nomeEmpresa">Nome da empresa: </label>
-              <input type="text" name="nomeEmpresa" id="nomeCliente" placeholder="Digite o nome da  empresa">
+              <input type="text" name="nomeEmpresa" id="nomeCliente" placeholder="Digite o nome da  empresa" required>
             </div>
 
             <div class="form-group d-flex flex-column mt-4"><!-- Razão social -->
               <label for="razaoSocial">Razão social: </label>
-              <input type="text" name="razaoSocial" id="razaoSocial" placeholder="Digite a razao social">
+              <input type="text" name="razaoSocial" id="razaoSocial" placeholder="Digite a razao social" required>
             </div>
 
             <div class="form-group d-flex flex-column mt-4"><!-- CPNJ -->
               <label for="cnpj">CNPJ: </label>
-              <input type="text" name="cnpj" id="cnpj" placeholder="Digite o cnpj da empresa">
+              <input type="text" name="cnpj" id="cnpj" placeholder="Digite o cnpj da empresa" required>
             </div>
 
-            <div class="form-group d-flex flex-column mt-4"><!-- CPNJ -->
-              <!--Devolução, Retorno, Complementar, Remessa, Entrega Futura e Venda Consignada-->
+            <div class="form-group d-flex flex-column mt-4"><!-- Natureza da operação -->             
               <label for="naturezaOperacao">Natureza da operação: </label>
-              <select name="naturezaOperacao" id="naturezaOperacao">
+              <select name="naturezaOperacao" id="naturezaOperacao" required>
                 <option value="venda">Venda Consignada</option>
                 <option value="devolução">Devolução</option>
                 <option value="retorno">Retorno</option>
@@ -46,20 +45,27 @@
               </select>
             </div>
 
-            <div class="form-group d-flex flex-column mt-4"><!-- CPNJ -->
-              <label for="descricaoProduto">Descrição do serviço: </label>
-              <textarea name="descricaoServiço" id="descricaoServiço"></textarea>
+            <div class="form-group d-flex flex-column mt-4"><!-- Descrição do serviço -->
+              <label for="descricaoServiço">Descrição do serviço: </label>
+              <textarea name="descricaoServiço" id="descricaoServiço" placeholder="Digite a descrição do serviço"
+                required></textarea>
+            </div>
+
+            <div class="form-group d-flex flex-column mt-4"><!-- Valor do serviço -->
+              <label for="valorServiço">Valor do serviço: </label>
+              <input type="number" name="valorServiço" id="valorServiço" placeholder="Digite o valor do serviço (em R$)"
+                required>
             </div>
 
             <div class="form-group mt-4 row"><!-- Data e hora -->
               <div class="col d-flex flex-column">
                 <label for="data">Data: </label>
-                <input type="date" name="data" id="data">
-              </div>                       
+                <input type="date" name="data" id="data" required>
+              </div>
               <div class="col d-flex flex-column">
                 <label for="hora">Hora: </label>
-                <input type="time" name="hora" id="hora">
-              </div>                       
+                <input type="time" name="hora" id="hora" required>
+              </div>
             </div>
 
             <div class="form-group mt-5 d-flex justify-content-center "> <!-- Botão -->
@@ -76,27 +82,38 @@
         <div class="box p-4">
           <h2 class="text-center pb-4">Nota Fiscal de Serviço</h2>
           <div>
-            <p><strong>Cliente:</strong> <span id="cliente"></span></p>
-            <p><strong>CNPJ:</strong> <span id="cnpj"></span></p>
-            <p><strong>Natureza da Operação:</strong> <span id="naturezaOperacao"></span></p>
-            <p><strong>Descrição do Produto:</strong> <span id="descricaoProduto"></span></p>
-            <p><strong>Data da Operação: </strong> <span id="dataOperacao"></span></p>
-            <p><strong>Hora da Operação: </strong> <span id="horaOperacao"></span></p>
-            <p><strong>Valor do Serviço (R$):</strong> <span id="valor"></span></p>
-            <p><strong>Imposto (10%):</strong> <span id="imposto"></span></p>
-            <p><strong>Total:</strong> <span id="total"></span></p>
+            <div class="mt-4">
+              <p><strong>Cliente:</strong> <span id="cliente"></span></p>
+            </div>
+            <div class="mt-4">
+              <p><strong>CNPJ:</strong> <span id="cnpj"></span></p>
+            </div>
+            <div class="mt-4">
+              <p><strong>Natureza da Operação:</strong> <span id="naturezaOperacao"></span></p>
+            </div>
+            <div class="mt-4">
+              <p><strong>Descrição do Produto:</strong> <span id="descricaoProduto"></span></p>
+            </div>
+            <div class="mt-4">
+              <p><strong>Data da Operação: </strong> <span id="dataOperacao"></span></p>
+            </div>
+            <div class="mt-4">
+              <p><strong>Hora da Operação: </strong> <span id="horaOperacao"></span></p>
+            </div>
+            <div class="mt-4">
+              <p><strong>Valor do Serviço (R$):</strong> <span id="valor"></span></p>
+            </div>
+            <div class="mt-4">
+              <p><strong>Imposto (10%):</strong> <span id="imposto"></span></p>
+            </div>
+            <div class="mt-4">
+              <p><strong>Total:</strong> <span id="total"></span></p>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </div>
-  <!-- Natureza da Operação -->
-
-
-  <!-- Descrição do Produto -->
-
-
-  <!-- Data da Operação -->
 
   <!-- BOOTSTRAP -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
