@@ -20,22 +20,23 @@
 
             <div class="form-group d-flex flex-column mt-4"><!-- Nome da empresa -->
               <label for="nomeEmpresa">Nome da empresa: </label>
-              <input type="text" name="nomeEmpresa" id="nomeEmpresa" placeholder="Digite o nome da  empresa" >
+              <input type="text" name="nomeEmpresa" id="nomeEmpresa" placeholder="Digite o nome da  empresa" autocomplete="off" required>
             </div>
 
             <div class="form-group d-flex flex-column mt-4"><!-- Razão social -->
               <label for="razaoSocial">Razão social: </label>
-              <input type="text" name="razaoSocial" id="razaoSocial" placeholder="Digite a razao social" >
+              <input type="text" name="razaoSocial" id="razaoSocial" placeholder="Digite a razao social" autocomplete="off" required>
             </div>
 
             <div class="form-group d-flex flex-column mt-4"><!-- CPNJ -->
               <label for="cnpj">CNPJ: </label>
-              <input type="text" name="cnpj" id="cnpj" minlength="14" placeholder="Digite o cnpj da empresa (14 dígitos)" >
+              <input type="text" name="cnpj" id="cnpj" minlength="14" placeholder="Digite o cnpj da empresa (14 dígitos)" autocomplete="off" required>
             </div>
 
             <div class="form-group d-flex flex-column mt-4"><!-- Natureza da operação -->
               <label for="naturezaOperacao">Natureza da operação: </label>
-              <select name="naturezaOperacao" id="naturezaOperacao" >
+              <select name="naturezaOperacao" id="naturezaOperacao" required>
+                <option value="" data-default disabled selected></option>
                 <option value="Venda Consignada">Venda Consignada</option>
                 <option value="Devolução">Devolução</option>
                 <option value="Retorno">Retorno</option>
@@ -48,23 +49,23 @@
             <div class="form-group d-flex flex-column mt-4"><!-- Descrição do serviço -->
               <label for="descricaoServiço">Descrição do serviço: </label>
               <textarea name="descricaoServiço" id="descricaoServiço" placeholder="Digite a descrição do serviço"
-                ></textarea>
+                required></textarea>
             </div>
 
             <div class="form-group d-flex flex-column mt-4"><!-- Valor do serviço -->
               <label for="valorServiço">Valor do serviço: </label>
               <input type="number" name="valorServiço" id="valorServiço" placeholder="Digite o valor do serviço (em R$)"
-                >
+                required>
             </div>
 
             <div class="form-group mt-4 row"><!-- Data e hora -->
               <div class="col d-flex flex-column">
                 <label for="data">Data: </label>
-                <input type="date" name="data" id="data" >
+                <input type="date" name="data" id="data" required>
               </div>
               <div class="col d-flex flex-column">
                 <label for="hora">Hora: </label>
-                <input type="time" name="hora" id="hora" >
+                <input type="time" name="hora" id="hora" required>
               </div>
             </div>
 
