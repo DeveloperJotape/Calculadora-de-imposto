@@ -42,7 +42,7 @@ select:focus {
     border: 1px solid #0384fc;
 }
 
-input[type=submit] {
+button {
     width: auto;
     background-color: #0384fc;
     border: 1px solid #0384fc;
@@ -52,19 +52,20 @@ input[type=submit] {
     padding: 8px 25px;
     transition: .5s;
     border-radius: 50px;
-
+    
 }
 
-input[type=submit]:hover {
+button:hover {
     background-color: #fff;
     color: #0384fc;
 }
+
 
 textarea {
     resize: none;
     height: 60px;
 }
 
-.result-nfe {
-    display: none;   
+#notaFiscal {
+    display: none; 
 }
